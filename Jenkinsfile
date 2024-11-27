@@ -6,15 +6,5 @@ pipeline{
                git branch: 'main', url: 'https://github.com/vijay1979-devops/terraform-1.git'
             }
         }
-        stage('Terraform Init'){
-            steps{
-                sh 'terraform init'
-            }
-        }
-        stage('Terraform Apply'){
-           steps{
-                sh 'terraform apply --auto-approve'
-           }
-        }
     }   
 }
